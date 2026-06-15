@@ -398,7 +398,21 @@ section{padding:100px 40px}
 .refund-row:last-child{border-bottom:none}
 .refund-condition{color:var(--ink2)}
 .refund-result{font-weight:700;color:var(--navy)}
+/* ── VOCAB OVERLAY (단어학습 팝업창 스타일) ── */
+#vocab-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--navy); /* 팝업창의 배경색 (어두운 네이비) */
+  z-index: 2000;           /* 네비게이션 바(z-index: 1000)보다 위에 뜨도록 설정 */
+  display: none;           /* 평소에는 화면에서 숨김 */
+}
 
+#vocab-overlay.open {
+  display: block;          /* 자바스크립트에 의해 open 클래스가 붙으면 화면에 표시 */
+}
 /* ── VOCAB APP ─────────────────────────────────── */
 #vocab{background:var(--navy);padding:80px 40px}
 .vocab-banner{
