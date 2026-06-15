@@ -408,6 +408,7 @@ section{padding:100px 40px}
   background: var(--navy); /* 팝업창의 배경색 (어두운 네이비) */
   z-index: 2000;           /* 네비게이션 바(z-index: 1000)보다 위에 뜨도록 설정 */
   display: none;           /* 평소에는 화면에서 숨김 */
+  overflow-y: auto;
 }
 
 #vocab-overlay.open {
@@ -1620,7 +1621,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);min-height:100vh
 .auth-switch span{color:var(--teal);font-weight:700;cursor:pointer;}
 
 /* ══ 관리자 화면 ══ */
-#admin-screen{padding:0 0 40px;}
+#admin-screen{padding:0 0 40px;
+              overflow-y: auto;
+             }
 #pending-screen{padding:0;}
 #admin-screen.active{display:block;}
 .admin-header{
