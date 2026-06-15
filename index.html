@@ -575,6 +575,46 @@ footer{
 .reveal-delay-1{transition-delay:.1s}
 .reveal-delay-2{transition-delay:.2s}
 .reveal-delay-3{transition-delay:.3s}
+
+  /* ── 모바일 상단 네비게이션 바 최적화 ── */
+@media(max-width: 600px){
+  nav {
+    padding: 0 10px;           /* 상단바 좌우 여백을 줄여 여유 공간 확보 */
+  }
+  .nav-logo {
+    font-size: 17px;           /* 화면에 맞춰 로고 크기 축소 */
+  }
+  .nav-actions {
+    gap: 4px;                  /* 버튼과 버튼 사이의 간격을 좁힘 */
+  }
+  .lang-btns {
+    gap: 2px;                  /* 언어 버튼(한국어/EN/中文) 사이 간격 축소 */
+  }
+  
+  /* 🔥 핵심: 글자가 세로로 쪼개지거나 두 줄로 늘어나는 현상 절대 방지 */
+  .btn-vocab-nav, .btn-apply-nav, .lang-btn-item {
+    white-space: nowrap;       /* 글자가 아래로 떨어지지 않고 무조건 한 줄로 유지 */
+    letter-spacing: -0.03em;   /* 자간(글자 간격)을 살짝 좁혀서 가로 폭 절약 */
+  }
+  
+  /* 단어학습 버튼 모바일 사이즈 조정 */
+  .btn-vocab-nav {
+    padding: 6px 8px;          /* 버튼 안쪽 여백 줄임 */
+    font-size: 11px;           /* 글자 크기 축소 */
+  }
+  
+  /* 언어 선택 버튼 모바일 사이즈 조정 */
+  .lang-btn-item {
+    padding: 4px 6px;
+    font-size: 10px;
+  }
+  
+  /* 신청하기 버튼 모바일 사이즈 조정 */
+  .btn-apply-nav {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+}
 </style>
 </head>
 <body class="lang-ko">
